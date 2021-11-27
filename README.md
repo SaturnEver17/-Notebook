@@ -74,7 +74,7 @@ android:background="@color/white">
     public void onPause() {
         super.onPause();
     }
-}
+
 
 显示笔记本的列表（主界面）
 
@@ -161,7 +161,7 @@ android:background="@color/white">
             }
         }
     }
-}
+
 
 搜索笔记（模糊搜索）
 
