@@ -40,7 +40,6 @@ android:background="@color/white">
 </LinearLayout>
 <!--已完成-->
 
-public class AppWelcomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
