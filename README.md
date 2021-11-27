@@ -222,6 +222,8 @@ android:background="@color/white">
 
 创建标题与笔记本内容
 
+![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/7.jpg)
+
 public class CreateNewNoteActivity extends AppCompatActivity {
 private SQLiteDatabase db;
 private DBHelper dbHelper;
