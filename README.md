@@ -24,7 +24,7 @@ b.新增笔记分类功能，用5个颜色来将笔记分为最多5种类别
 
 app起始界面
 
-(https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/1.jpg)
+![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/1.jpg)
 
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
