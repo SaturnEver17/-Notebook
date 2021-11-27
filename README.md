@@ -222,6 +222,8 @@ android:background="@color/white">
 
 创建标题与笔记本内容
 
+```
+
 ![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/7.jpg)
 
 public class CreateNewNoteActivity extends AppCompatActivity {
@@ -287,8 +289,11 @@ private EditText bodyEdit;
         colortag = img.getTag() + "";
     }
 }
+```
 
 修改现有笔记
+
+```
 
 public class EditNoteActivity extends AppCompatActivity {
 private SQLiteDatabase db;
@@ -380,6 +385,7 @@ private EditText bodyEdit;
         return super.onOptionsItemSelected(item);
     }
 }
+```
 
 附加功能的实现
 
