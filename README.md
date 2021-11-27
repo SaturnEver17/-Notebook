@@ -168,7 +168,7 @@ android:background="@color/white">
 ![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/3.jpg)
 ![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/4.jpg)
 
-public class SearchResultActivity extends AppCompatActivity {
+```public class SearchResultActivity extends AppCompatActivity {
     private List<Note> noteList=new ArrayList<>();
     private MyAdapter myAdapter;
     private DBHelper dbHelper;
@@ -218,6 +218,7 @@ public class SearchResultActivity extends AppCompatActivity {
         }
     }
 }
+```
 
 创建标题与笔记本内容
 
