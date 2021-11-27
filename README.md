@@ -76,36 +76,6 @@ android:background="@color/white">
 
 显示笔记本的列表（主界面）
 
-package com.sueword.notepad;
-
-import android.app.SearchManager;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.sueword.notepad.Beans.Note;
-import com.sueword.notepad.Utils.DBHelper;
-import com.sueword.notepad.Utils.MyAdapter;
-import com.sueword.notepad.Utils.OnItemCLickListener;
-
 public class MainActivity extends AppCompatActivity {
 private List<Note> noteList=new ArrayList<>();
 private MyAdapter myAdapter;
