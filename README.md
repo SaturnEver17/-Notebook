@@ -77,45 +77,6 @@ android:background="@color/white">
 显示笔记本的列表（主界面）
 
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-super.onCreate(savedInstanceState);
-setContentView(R.layout.activity_main);
-Toolbar toolbar =  findViewById(R.id.toolbar);
-setSupportActionBar(toolbar);
-myHandler=new MyHandler(this);
-FloatingActionButton fab =  findViewById(R.id.fab);
-fab.setOnClickListener(new View.OnClickListener() {
-@Override
-public void onClick(View view) {
-Intent intent=new Intent(MainActivity.this,CreateNewNoteActivity.class);
-startActivity(intent);
-}
-});
-recyclerView=findViewById(R.id.myRecyclerView);
-Context context=MainActivity.this;
-dbHelper=new DBHelper(context);
-db=dbHelper.getReadableDatabase();
-showNotes();
-myAdapter=new MyAdapter(this,noteList);
-recyclerView.setAdapter(myAdapter);
-recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
-recyclerView.setItemAnimator(new DefaultItemAnimator());
-recyclerView.setHasFixedSize(true);
-myAdapter.setOnItemCLickListener(new OnItemCLickListener() {
-@Override
-public void onItemClick(View view, int position) {
-int id=noteList.get(position).getId();
-Bundle b=new Bundle();
-b.putInt("id",id);
-b.putInt("position",position);
-Intent intent=new Intent(MainActivity.this,EditNoteActivity.class);
-intent.putExtras(b);
-startActivity(intent);
-}
-});
-}
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
