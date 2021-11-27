@@ -222,9 +222,9 @@ android:background="@color/white">
 
 创建标题与笔记本内容
 
-```
-
 ![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/7.jpg)
+
+```
 
 public class CreateNewNoteActivity extends AppCompatActivity {
 private SQLiteDatabase db;
@@ -292,6 +292,8 @@ private EditText bodyEdit;
 ```
 
 修改现有笔记
+
+![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/6.jpg)
 
 ```
 
@@ -390,6 +392,10 @@ private EditText bodyEdit;
 附加功能的实现
 
 a.UI美化
+
+![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/2.jpg)
+
+```
 
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -496,9 +502,12 @@ android:theme="@style/AppTheme.AppBarOverlay">
 
     </LinearLayout>
 </LinearLayout>
+```
 
 b.用不同颜色进行Note的分类
 
+![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/5.jpg)
+```
 @Override
 public boolean onOptionsItemSelected(MenuItem item) {
 int id = item.getItemId();
@@ -532,3 +541,4 @@ int id = item.getItemId();
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
 </resources>
+```
