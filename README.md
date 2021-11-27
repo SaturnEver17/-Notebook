@@ -76,13 +76,7 @@ android:background="@color/white">
 
 显示笔记本的列表（主界面）
 
-public class MainActivity extends AppCompatActivity {
-private List<Note> noteList=new ArrayList<>();
-private MyAdapter myAdapter;
-private DBHelper dbHelper;
-private SQLiteDatabase db;
-private RecyclerView recyclerView;
-static Handler myHandler;
+
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
