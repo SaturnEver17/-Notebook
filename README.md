@@ -169,54 +169,54 @@ android:background="@color/white">
 ![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/4.jpg)
 
 public class SearchResultActivity extends AppCompatActivity {
-private List<Note> noteList=new ArrayList<>();
-private MyAdapter myAdapter;
-private DBHelper dbHelper;
-private SQLiteDatabase db;
-private RecyclerView recyclerView;
-@Override
-protected void onCreate(@Nullable Bundle savedInstanceState) {
-super.onCreate(savedInstanceState);
-setContentView(R.layout.search_result);
-String SearchContent=getIntent().getStringExtra(SearchManager.QUERY);
-recyclerView=findViewById(R.id.myRecyclerView);
-Context context=SearchResultActivity.this;
-dbHelper=new DBHelper(context);
-db=dbHelper.getReadableDatabase();
-showNotes(SearchContent);
-myAdapter=new MyAdapter(this,noteList);
-recyclerView.setAdapter(myAdapter);
-recyclerView.setLayoutManager(new LinearLayoutManager(this));
-recyclerView.setItemAnimator(new DefaultItemAnimator());
-recyclerView.setHasFixedSize(true);
-myAdapter.setOnItemCLickListener(new OnItemCLickListener() {
-@Override
-public void onItemClick(View view, int position) {
-int id=noteList.get(position).getId();
-Bundle b=new Bundle();
-b.putInt("id",id);
-b.putInt("position",position);
-Intent intent=new Intent(SearchResultActivity.this,EditNoteActivity.class);
-intent.putExtras(b);
-startActivity(intent);
-finish();
-}
-});
-}
-public void showNotes(String str){
-Cursor cursor=db.rawQuery("select * from notes where title like '%"+str+"%'",null);
-if(cursor.moveToFirst()){
-do {
-int nid=cursor.getInt(0);
-String ntitle=cursor.getString(1);
-String nbody=cursor.getString(2);
-String date=cursor.getString(3);
-String tag=cursor.getString(4);
-Note note=new Note(nid,ntitle,nbody,date,tag);
-noteList.add(note);
-}while (cursor.moveToNext());
-}
-}
+    private List<Note> noteList=new ArrayList<>();
+    private MyAdapter myAdapter;
+    private DBHelper dbHelper;
+    private SQLiteDatabase db;
+    private RecyclerView recyclerView;
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.search_result);
+        String SearchContent=getIntent().getStringExtra(SearchManager.QUERY);
+        recyclerView=findViewById(R.id.myRecyclerView);
+        Context context=SearchResultActivity.this;
+        dbHelper=new DBHelper(context);
+        db=dbHelper.getReadableDatabase();
+        showNotes(SearchContent);
+        myAdapter=new MyAdapter(this,noteList);
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setHasFixedSize(true);
+        myAdapter.setOnItemCLickListener(new OnItemCLickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                int id=noteList.get(position).getId();
+                Bundle b=new Bundle();
+                b.putInt("id",id);
+                b.putInt("position",position);
+                Intent intent=new Intent(SearchResultActivity.this,EditNoteActivity.class);
+                intent.putExtras(b);
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+    public void showNotes(String str){
+        Cursor cursor=db.rawQuery("select * from notes where title like '%"+str+"%'",null);
+        if(cursor.moveToFirst()){
+            do {
+                int nid=cursor.getInt(0);
+                String ntitle=cursor.getString(1);
+                String nbody=cursor.getString(2);
+                String date=cursor.getString(3);
+                String tag=cursor.getString(4);
+                Note note=new Note(nid,ntitle,nbody,date,tag);
+                noteList.add(note);
+            }while (cursor.moveToNext());
+        }
+    }
 }
 
 创建标题与笔记本内容
