@@ -78,6 +78,8 @@ android:background="@color/white">
 
 显示笔记本的列表（主界面）
 
+![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/2.jpg)
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -162,6 +164,9 @@ android:background="@color/white">
 }
 
 搜索笔记（模糊搜索）
+
+![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/3.jpg)
+![Image text](https://github.com/SaturnEver17/-Notebook/blob/master/shortcut/4.jpg)
 
 public class SearchResultActivity extends AppCompatActivity {
 private List<Note> noteList=new ArrayList<>();
